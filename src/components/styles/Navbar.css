@@ -1,0 +1,20 @@
+aside {
+    background-color: #f8f9fa;
+}
+
+.nav {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.container p {
+    margin: 0;
+    text-align: center;
+}
+
+.container .nav {
+    margin-left: auto;
+}
