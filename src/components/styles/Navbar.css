@@ -20,7 +20,7 @@ aside {
 }
 
 .cart {
-    position: fixed;
+    position: absolute;
     display: flex;
     img {
         font-size: 25px;
