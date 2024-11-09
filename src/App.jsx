@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import ProductDetails from "./components/ProductDetails";
-import Cart from "./components/Cart";
 
 export default function App() {
   const [products, setProducts] = useState([]);
   const [filterText, setFilterText] = useState('');
   const [carrito, setCarrito] = useState([]);
-
+  
   function agregarAlCarrito(producto) {
-    setCarrito(prevCarrito => [...prevCarrito, producto]);
+    setCarrito((prevCarrito) => [...prevCarrito, producto]);
   }
 
   useEffect(() => {
@@ -29,7 +28,6 @@ export default function App() {
     <>
       <Navbar filterText={filterText} onFilterText={setFilterText} carrito={carrito} />
       <ProductDetails products={products} filterText={filterText} agregarAlCarrito={agregarAlCarrito} />
-      <Cart carrito={carrito} />
     </>
   );
 }
